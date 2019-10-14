@@ -5,5 +5,6 @@ if [ $commands[fasd] ]; then # check if fasd is installed
   fi
   source "$fasd_cache"
   unset fasd_cache
+  PATH="$PATH:$PWD/bin"
 
 fi
