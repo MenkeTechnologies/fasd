@@ -6,9 +6,10 @@ if [ $commands[fasd] ]; then # check if fasd is installed
   source "$fasd_cache"
   unset fasd_cache
 else
-  PATH="$PATH:${0:h}/bin"
-  export PATH
-  rehash
+  #PATH="$PATH:${0:h}/bin"
+  #export PATH
+  #rehash
+  source "${0:h}/bin/fasd"
   fasd_cache="${ZSH_CACHE_DIR}/fasd-init-cache"
   fasd --init auto >| "$fasd_cache"
   source "$fasd_cache"
