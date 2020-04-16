@@ -9,7 +9,7 @@ else
   #PATH="$PATH:${0:h}/bin"
   #export PATH
   #rehash
-  source "${0:h}/bin/fasd"
+  export PATH="$PATH:${0:h}/bin"
   fasd_cache="${ZSH_CACHE_DIR}/fasd-init-cache"
   fasd --init auto >| "$fasd_cache"
   source "$fasd_cache"
